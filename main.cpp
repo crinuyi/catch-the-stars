@@ -7,6 +7,8 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
+#include "libraries/animation.hpp"
+
 void displayScene();
 void reshape(int width, int height);
 void mouseButton(int button, int state, int x, int y);
@@ -15,7 +17,6 @@ void mouseWheel(int button, int dir, int x, int y);
 void keyboardDown(unsigned char key, int x, int y);
 void keyboardUp(unsigned char key, int x, int y);
 void specialKeys(int key, int x, int y);
-void animation();
 
 void initialize() {
     glClearColor(0.2f, 0.2f, 0.2f, 1.0f);
