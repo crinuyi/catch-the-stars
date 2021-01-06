@@ -1,0 +1,1 @@
+g++ main.cpp -lglut -lGL -lGLU -lGLEW -I/usr/include/freetype2 -lfreetype
