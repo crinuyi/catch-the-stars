@@ -7,21 +7,16 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
+#include "libraries/globalVariables.hpp"
+#include "libraries/objLoader.hpp"
+#include "libraries/ground.hpp"
+#include "libraries/shaderStuff.hpp"
+#include "libraries/movement.hpp"
+#include "libraries/program.hpp"
+#include "libraries/model.hpp"
 #include "libraries/animation.hpp"
+#include "libraries/display.hpp"
 
-void displayScene();
-void reshape(int width, int height);
-void mouseButton(int button, int state, int x, int y);
-void mouseMotion(int x, int y);
-void mouseWheel(int button, int dir, int x, int y);
-void keyboardDown(unsigned char key, int x, int y);
-void keyboardUp(unsigned char key, int x, int y);
-void specialKeys(int key, int x, int y);
-
-void initialize() {
-    glClearColor(0.2f, 0.2f, 0.2f, 1.0f);
-	glEnable(GL_DEPTH_TEST);
-}
 
 int main(int argc, char *argv[]) {
 	glutInit(&argc, argv);
