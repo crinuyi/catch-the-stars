@@ -4,6 +4,8 @@ class Model;
 bool checkIfNoCollisions(glm::vec3 position);
 void checkForStarsToCollect(glm::vec3 position);
 class Program;
+class Font;
+class Text;
 class Ground;
 
 std::vector<Model> models;

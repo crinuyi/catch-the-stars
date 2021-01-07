@@ -14,6 +14,8 @@
 #include "libraries/movement.hpp"
 #include "libraries/program.hpp"
 #include "libraries/model.hpp"
+#include "libraries/font.hpp"
+#include "libraries/text.hpp"
 #include "libraries/animation.hpp"
 #include "libraries/display.hpp"
 
