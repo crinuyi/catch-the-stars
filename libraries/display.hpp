@@ -43,8 +43,11 @@ void initialize() {
 	}
 
 	Font* pixeledFont = new Font("fonts/Pixeled.ttf");
+	Font* digitalDarkSystemFont = new Font("fonts/digital dark system.ttf");
 
-	Text fps_text(std::to_string(frameCounter), 1160, 680, 0.2f, glm::vec3(0.47f, 0.0f, 0.85f), pixeledFont);
+	Text fpsText(std::to_string(frameCounter), 1160, 680, 0.2f, glm::vec3(0.47f, 0.0f, 0.85f), pixeledFont);
+	Text starCounterText(std::to_string(starCounter), 25, 40, 1.5f, glm::vec3(0.47f, 0.0f, 0.85f), digitalDarkSystemFont);
 
-	texts.push_back(fps_text);
+	texts.push_back(fpsText);
+	texts.push_back(starCounterText);
 }

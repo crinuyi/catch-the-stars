@@ -8,6 +8,7 @@ void animation() {
     keyboard();
 
     texts[0].text = std::to_string(frameCounter) + " fps";
+    texts[1].text = std::to_string(starCounter);
 
     for(int i=1; i<41; i+=2)
         models[i].rotation_y += 0.025f;
