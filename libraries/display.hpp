@@ -38,7 +38,7 @@ void initialize() {
 		float max = 15.0f;
 		float x = min + rand()/(float)RAND_MAX*(max-min); //losowanie między 2 liczbami
 	    float z = min + rand()/(float)RAND_MAX*(max-min);
-		Model starModel(x, ground->getAltitude(glm::vec3(x, 0.0f, z)), z, 0.0f, 0.0f, 0.0f, 0.5f, "models/star.obj", program, tree, false, false);
+		Model starModel(x, ground->getAltitude(glm::vec3(x, 0.0f, z)), z, 0.0f, 0.0f, 0.0f, 0.5f, "models/star.obj", program, tree, false, true);
 		models.push_back(starModel);
 	}
 

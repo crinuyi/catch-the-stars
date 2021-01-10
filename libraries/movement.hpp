@@ -5,7 +5,7 @@ glm::vec3 cameraRotation = glm::vec3(0.0f,-(M_PI/2.0),0.0f); //pitch, yaw, roll
 glm::vec3 cameraPosition = glm::vec3(0.0f,0.0f,0.0f);
 glm::vec3 cameraFront = glm::vec3(0.0,0.0,-1.0);
 glm::vec3 cameraUp = glm::vec3(0.0,1.0,0.0);
-float cameraCollisionRadius = 1.0f;
+float cameraCollisionRadius = 0.5f;
 
 //https://community.khronos.org/t/extracting-camera-position-from-a-modelview-matrix/68031
 glm::vec3 ExtractCameraPos(const glm::mat4 & a_modelView) {
