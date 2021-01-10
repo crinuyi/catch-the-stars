@@ -9,6 +9,12 @@ void animation() {
 
     texts[0].text = std::to_string(frameCounter) + " fps";
 
+    for(int i=1; i<41; i+=2)
+        models[i].rotation_y += 0.025f;
+
+    for(int i=2; i<41; i+=2)
+        models[i].rotation_y -= 0.025f;
+
     __CHECK_FOR_ERRORS;
 	glutPostRedisplay();
 
