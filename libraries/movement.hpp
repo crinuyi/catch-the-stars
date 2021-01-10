@@ -2,7 +2,7 @@ int keyPressed[256] = {0};
 int _mouse_buttonState = GLUT_UP;
 int _mouse_buttonX, _mouse_buttonY;
 glm::vec3 cameraRotation = glm::vec3(0.0f,-(M_PI/2.0),0.0f); //pitch, yaw, roll
-glm::vec3 cameraPosition = glm::vec3(2.0f,1.0f,5.0f);
+glm::vec3 cameraPosition = glm::vec3(0.0f,0.0f,0.0f);
 glm::vec3 cameraFront = glm::vec3(0.0,0.0,-1.0);
 glm::vec3 cameraUp = glm::vec3(0.0,1.0,0.0);
 float cameraCollisionRadius = 1.0f;
