@@ -9,6 +9,7 @@ class Text;
 class Ground;
 
 std::vector<Model> models;
+std::vector<Text> texts;
 Ground* ground;
 
 glm::mat4 matProj;

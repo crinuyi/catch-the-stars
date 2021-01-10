@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
 	glutInitContextVersion(3, 2);
 	glutInitContextProfile(GLUT_CORE_PROFILE);
-	glutInitWindowSize(800, 800);
+	glutInitWindowSize(1280, 720);
 	glutCreateWindow("Catch the Stars");
 
 	glutDisplayFunc(displayScene);
