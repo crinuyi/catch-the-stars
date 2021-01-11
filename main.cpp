@@ -20,7 +20,6 @@
 #include "libraries/animation.hpp"
 #include "libraries/display.hpp"
 
-// TODO -> change textures
 
 int main(int argc, char *argv[]) {
 	glutInit(&argc, argv);

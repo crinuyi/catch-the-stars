@@ -60,7 +60,7 @@ void main()
 
 
 	// Zastosowanie oswietlenia do fragmentu
-	vec4 result = vec4(Calculate_PointLight(ourPosition, inoutNormal), 1.0f) * objectColor;
+	vec4 result = vec4(clamp(Calculate_PointLight(ourPosition, inoutNormal),0,1), 1.0f) * objectColor;
 
 	outColor = result;
 

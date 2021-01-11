@@ -24,6 +24,6 @@ void main()
 
 	 ourPosition = vec3(matModel * inPosition);
 	inoutUV = inUV;
-	inoutNormal = matNormal * inNormal;
+	inoutNormal = normalize(matNormal * inNormal);
 
 }
