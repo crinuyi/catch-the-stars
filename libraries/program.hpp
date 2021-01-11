@@ -21,8 +21,8 @@ Program::Program(const char* vertex_shader, const char* fragment_shader) {
 
 	LinkAndValidateProgram(id);
 
-    this->light_ambient = glm::vec3(0.2, 0.2, 0.2);
-    this->light_diffuse = glm::vec3(1.0, 1.0, 1.0);
+    this->light_ambient = glm::vec3(0.6, 0.6, 0.6);
+    this->light_diffuse = glm::vec3(0.97, 1.0, 0.84);
     this->light_specular = glm::vec3(0.05, 0.05, 0.05);
-    this->light_position = glm::vec3(4.0, 0.0, 2.0);
+    this->light_position = glm::vec3(5.0, 2.0, 5.0);
 };

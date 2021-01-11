@@ -25,12 +25,12 @@ int starCounter;
 int countdownTimerCounter = 20;
 
 const char* skyboxFiles[6] = {
-			"textures/skybox/posx.png",
-			"textures/skybox/negx.png",
-			"textures/skybox/posy.png",
-			"textures/skybox/negy.png",
-			"textures/skybox/posz.png",
-			"textures/skybox/negz.png"
+	"textures/skybox/posx.png",
+	"textures/skybox/negx.png",
+	"textures/skybox/posy.png",
+	"textures/skybox/negy.png",
+	"textures/skybox/posz.png",
+	"textures/skybox/negz.png"
 };
 
 bool keyboardActive = true;

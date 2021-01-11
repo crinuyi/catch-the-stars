@@ -34,13 +34,13 @@ void initialize() {
 	Texture* skyboxTexture = new Texture(skyboxFiles);
 	Texture* yellowTexture = new Texture("textures/yellow.png");
 	Texture* grassTexture = new Texture("textures/grass.png");
-	Texture* snowflake_tex = new Texture("textures/snowflake.png");
+	Texture* confettiTexture = new Texture("textures/confetti.png");
 
 	ground = new Ground("models/ground.obj");
 
 	Model groundModel(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, "models/ground.obj", program, grassTexture, false, false);
 	Model skyboxModel(0.0f, 0.0f, 5.0f, 0.0f, 0.0f, 0.0f, 50.0f, "models/cube.obj", skyboxProgram, skyboxTexture, true, false);
-	Model* oneConfettiModel = new Model(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.05f, "models/plane.obj", confettiProgram, snowflake_tex, false, false);
+	Model* oneConfettiModel = new Model(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.05f, "models/plane.obj", confettiProgram, confettiTexture, false, false);
 
 	models.push_back(groundModel);
 	models.push_back(skyboxModel);
