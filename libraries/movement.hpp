@@ -80,20 +80,22 @@ void specialKeys(int key, int x, int y) {
 
 void keyboard() {
 	glm::vec3 cameraFrontXZ = glm::normalize(glm::vec3(cameraFront.x, 0.0, cameraFront.z)); //kamera zawsze w poziomie
-	if(keyPressed[27]) //ESC
-		exit(0);
-	if(keyPressed['w']) {
-		moveCamera(cameraFrontXZ*0.05f);
-	}
-	if(keyPressed['s']) {
-		moveCamera(-cameraFrontXZ*0.05f);
-	}
-	if(keyPressed['a']) {
-		moveCamera(-glm::normalize(glm::cross(cameraFront, cameraUp)) * 0.05f);
-	}
-	if(keyPressed['d']) {
-		moveCamera(glm::normalize(glm::cross(cameraFront, cameraUp)) * 0.05f);
-	}
+	if(keyboardActive) {
+        if(keyPressed[27]) //ESC
+            exit(0);
+        if(keyPressed['w']) {
+            moveCamera(cameraFrontXZ*0.05f);
+        }
+        if(keyPressed['s']) {
+            moveCamera(-cameraFrontXZ*0.05f);
+        }
+        if(keyPressed['a']) {
+            moveCamera(-glm::normalize(glm::cross(cameraFront, cameraUp)) * 0.05f);
+        }
+        if(keyPressed['d']) {
+            moveCamera(glm::normalize(glm::cross(cameraFront, cameraUp)) * 0.05f);
+        }
+    }
 }
 
 void keyboardUp(unsigned char key, int x, int y) {

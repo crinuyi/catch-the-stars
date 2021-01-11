@@ -11,8 +11,10 @@ void displayScene() {
 		drawText(t);
 	glEnable(GL_DEPTH_TEST);
 
-	if(countdownTimerCounter == 0)
+	if(countdownTimerCounter == 0) {
 		confettiModel->drawConfetti();
+        keyboardActive = false;
+	}
 
 	glUseProgram( 0 );
 	glBindVertexArray( 0 );

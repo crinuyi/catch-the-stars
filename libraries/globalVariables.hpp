@@ -32,3 +32,5 @@ const char* skyboxFiles[6] = {
 			"textures/skybox/posz.jpg",
 			"textures/skybox/negz.jpg"
 };
+
+bool keyboardActive = true;
