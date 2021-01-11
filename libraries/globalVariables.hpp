@@ -21,7 +21,7 @@ glm::mat3 matNormal;
 int frameCounter;
 int starCounter;
 
-const char* files[6] = {
+const char* skyboxFiles[6] = {
 			"textures/skybox/posx.jpg",
 			"textures/skybox/negx.jpg",
 			"textures/skybox/posy.jpg",

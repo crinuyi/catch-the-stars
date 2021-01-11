@@ -23,15 +23,19 @@ void initialize() {
 	frameCounter = 0;
 
 	Program* program = new Program("shaders/vertex.glsl", "shaders/fragment.glsl");
+	Program* skyboxProgram = new Program("shaders/skybox_vertex.glsl", "shaders/skybox_fragment.glsl");
 
+	Texture* skyboxTexture = new Texture(skyboxFiles);
 	Texture* tiles = new Texture("textures/tiles.jpg");
 	Texture* tree = new Texture("textures/tree.png");
 
 	ground = new Ground("models/ground.obj");
 
 	Model groundModel(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, "models/ground.obj", program, tiles, false, false);
+	Model skyboxModel(0.0f, 0.0f, 5.0f, 0.0f, 0.0f, 0.0f, 50.0f, "models/cube.obj", skyboxProgram, skyboxTexture, true, false);
 
 	models.push_back(groundModel);
+	models.push_back(skyboxModel);
 
 	for (int i=0; i<40; i++) {
 		float min = -15.0f;
