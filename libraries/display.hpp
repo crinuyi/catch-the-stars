@@ -32,13 +32,13 @@ void initialize() {
 	Program* confettiProgram = new Program("shaders/snowflake_vertex.glsl", "shaders/snowflake_fragment.glsl");
 
 	Texture* skyboxTexture = new Texture(skyboxFiles);
-	Texture* tiles = new Texture("textures/tiles.jpg");
-	Texture* tree = new Texture("textures/tree.png");
+	Texture* yellowTexture = new Texture("textures/yellow.png");
+	Texture* grassTexture = new Texture("textures/grass.png");
 	Texture* snowflake_tex = new Texture("textures/snowflake.png");
 
 	ground = new Ground("models/ground.obj");
 
-	Model groundModel(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, "models/ground.obj", program, tiles, false, false);
+	Model groundModel(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, "models/ground.obj", program, grassTexture, false, false);
 	Model skyboxModel(0.0f, 0.0f, 5.0f, 0.0f, 0.0f, 0.0f, 50.0f, "models/cube.obj", skyboxProgram, skyboxTexture, true, false);
 	Model* oneConfettiModel = new Model(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.05f, "models/plane.obj", confettiProgram, snowflake_tex, false, false);
 
@@ -52,7 +52,7 @@ void initialize() {
 		float max = 15.0f;
 		float x = min + rand()/(float)RAND_MAX*(max-min); //losowanie między 2 liczbami
 	    float z = min + rand()/(float)RAND_MAX*(max-min);
-		Model starModel(x, ground->getAltitude(glm::vec3(x, 0.0f, z)), z, 0.0f, 0.0f, 0.0f, 0.5f, "models/star.obj", program, tree, false, true);
+		Model starModel(x, ground->getAltitude(glm::vec3(x, 0.0f, z)), z, 0.0f, 0.0f, 0.0f, 0.5f, "models/star.obj", program, yellowTexture, false, true);
 		models.push_back(starModel);
 	}
 
