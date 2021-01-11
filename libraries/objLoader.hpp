@@ -58,7 +58,7 @@ bool loadOBJ(
 		int res = fscanf(file, "%s", lineHeader);
 
 		if (res == EOF)
-			break; // EOF = End Of File. Quit the loop.
+			break;
 
 		// read vertex coordinates
 		if ( strcmp( lineHeader, "v" ) == 0 )

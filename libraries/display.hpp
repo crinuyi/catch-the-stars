@@ -27,9 +27,9 @@ void initialize() {
 	glEnable(GL_DEPTH_TEST);
 	frameCounter = 0;
 
-	Program* program = new Program("shaders/phong_vertex.glsl", "shaders/phong_fragment.glsl");
-	Program* skyboxProgram = new Program("shaders/skybox_vertex.glsl", "shaders/skybox_fragment.glsl");
-	Program* confettiProgram = new Program("shaders/snowflake_vertex.glsl", "shaders/snowflake_fragment.glsl");
+	Program* program = new Program("shaders/phongVertex.glsl", "shaders/phongFragment.glsl");
+	Program* skyboxProgram = new Program("shaders/skyboxVertex.glsl", "shaders/skyboxFragment.glsl");
+	Program* confettiProgram = new Program("shaders/confettiVertex.glsl", "shaders/confettiFragment.glsl");
 
 	Texture* skyboxTexture = new Texture(skyboxFiles);
 	Texture* yellowTexture = new Texture("textures/yellow.png");
@@ -50,7 +50,7 @@ void initialize() {
 	for (int i=0; i<40; i++) {
 		float min = -15.0f;
 		float max = 15.0f;
-		float x = min + rand()/(float)RAND_MAX*(max-min); //losowanie między 2 liczbami
+		float x = min + rand()/(float)RAND_MAX*(max-min);
 	    float z = min + rand()/(float)RAND_MAX*(max-min);
 		Model starModel(x, ground->getAltitude(glm::vec3(x, 0.0f, z)), z, 0.0f, 0.0f, 0.0f, 0.5f, "models/star.obj", program, yellowTexture, false, true);
 		models.push_back(starModel);

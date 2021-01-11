@@ -34,7 +34,7 @@ class Model {
             Texture* texture, 
             bool isCollisional,
             bool isCollectible
-        ); //konstruktor
+        );
 
 
 };
@@ -144,14 +144,11 @@ void DrawModel(Model model) {
 	matModel = glm::rotate( matModel, model.rotation_z, glm::vec3( 0.0f, 0.0f, 1.0f ) );
 	matModel = glm::scale(matModel, glm::vec3(model.scale));
 	
-	// Obliczanie macierzy rzutowania
 	matProjView = matProj * matView * matModel;
 	matNormal = glm::transpose(glm::inverse(matModel));
 
-	//obliczanie pozycji kamery
 	model.program->camera_position = ExtractCameraPos(matView*matModel);
 
-	// Przekazanie macierzy rzutowania
 	glUniformMatrix4fv(glGetUniformLocation(model.program->id, "matProjView"), 1, GL_FALSE, glm::value_ptr(matProjView));
 	glUniformMatrix3fv(glGetUniformLocation(model.program->id, "matNormal"), 1, GL_FALSE, glm::value_ptr(matNormal));
 	glUniformMatrix4fv(glGetUniformLocation(model.program->id, "matModel"), 1, GL_FALSE, glm::value_ptr(matModel));

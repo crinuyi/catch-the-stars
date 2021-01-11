@@ -74,10 +74,6 @@ void reshape(int width, int height) {
 	matProj = glm::perspective(glm::radians(80.0f), width/(float)height, 0.1f, 100.0f);
 }
 
-void specialKeys(int key, int x, int y) {
-
-}
-
 void keyboard() {
 	glm::vec3 cameraFrontXZ = glm::normalize(glm::vec3(cameraFront.x, 0.0, cameraFront.z)); //kamera zawsze w poziomie
 	if(keyboardActive) {
@@ -129,8 +125,4 @@ void mouseMotion(int x, int y) {
 		if(cameraRotation.x > glm::radians(85.0f)) //blokowanie patrzenia prosto w dół
 			cameraRotation.x = glm::radians(85.0f);
     }
-}
-
-void mouseWheel(int button, int dir, int x, int y) {
-
 }

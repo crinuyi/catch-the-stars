@@ -33,10 +33,8 @@ int main(int argc, char *argv[]) {
 	glutReshapeFunc(reshape);
 	glutMouseFunc(mouseButton);
 	glutMotionFunc(mouseMotion);
-	glutMouseWheelFunc(mouseWheel);
 	glutKeyboardFunc(keyboardDown);
     glutKeyboardUpFunc(keyboardUp);
-	glutSpecialFunc(specialKeys);
 	glutIdleFunc(animation);
 
 	glewExperimental = GL_TRUE;

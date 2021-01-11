@@ -84,7 +84,6 @@ void ConfettiModel::drawConfetti() {
 	matProjView = matProj * matView;
 	matNormal = glm::transpose(glm::inverse(matModel));
 
-	// Przekazanie macierzy rzutowania
 	glUniformMatrix4fv( glGetUniformLocation(this->confetti->program->id, "matProjView"), 1, GL_FALSE,  glm::value_ptr(matProjView));
 	glUniformMatrix3fv( glGetUniformLocation(this->confetti->program->id, "matNormal"), 1, GL_FALSE,  glm::value_ptr(matNormal));
 	
