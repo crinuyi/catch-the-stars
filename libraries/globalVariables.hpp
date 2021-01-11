@@ -20,6 +20,7 @@ glm::mat3 matNormal;
 
 int frameCounter;
 int starCounter;
+int countdownTimerCounter = 20;
 
 const char* skyboxFiles[6] = {
 			"textures/skybox/posx.jpg",

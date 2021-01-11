@@ -9,6 +9,7 @@ void animation() {
 
     texts[0].text = std::to_string(frameCounter) + " fps";
     texts[1].text = std::to_string(starCounter);
+    texts[2].text = std::to_string(countdownTimerCounter);
 
     //rotation of stars
     for(int i=2; i<42; i+=2)
@@ -27,5 +28,8 @@ void animation() {
         oldTime = std::chrono::high_resolution_clock::now();
         frameCounter = fps;
         fps = 0;
+
+        if(countdownTimerCounter > 0)
+            countdownTimerCounter--;
     }
 }

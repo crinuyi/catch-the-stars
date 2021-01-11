@@ -20,7 +20,6 @@
 #include "libraries/display.hpp"
 
 // TODO -> change textures
-// TODO -> add skybox
 // TODO -> add timer
 // TODO -> add confetti at the end of the round
 // TODO -> add "Click ESC to exit" text
