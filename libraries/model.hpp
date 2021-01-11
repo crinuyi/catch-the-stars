@@ -152,16 +152,17 @@ void DrawModel(Model model) {
 	model.program->camera_position = ExtractCameraPos(matView*matModel);
 
 	// Przekazanie macierzy rzutowania
-	glUniformMatrix4fv( glGetUniformLocation(model.program->id, "matProjView"), 1, GL_FALSE,  glm::value_ptr(matProjView));
-	glUniformMatrix3fv( glGetUniformLocation(model.program->id, "matNormal"), 1, GL_FALSE,  glm::value_ptr(matNormal));
-	
+	glUniformMatrix4fv(glGetUniformLocation(model.program->id, "matProjView"), 1, GL_FALSE, glm::value_ptr(matProjView));
+	glUniformMatrix3fv(glGetUniformLocation(model.program->id, "matNormal"), 1, GL_FALSE, glm::value_ptr(matNormal));
+	glUniformMatrix4fv(glGetUniformLocation(model.program->id, "matModel"), 1, GL_FALSE, glm::value_ptr(matModel));
+
 	glUniform1i(glGetUniformLocation(model.program->id, "tex0"), 0);
 
-	glUniform3fv( glGetUniformLocation(model.program->id, "light_ambient"), 1, glm::value_ptr(model.program->light_ambient)); //value_ptr zawsze podaje 1 element w przypadku tablicy
-	glUniform3fv( glGetUniformLocation(model.program->id, "light_diffuse"), 1, glm::value_ptr(model.program->light_diffuse));
-	glUniform3fv( glGetUniformLocation(model.program->id, "light_specular"), 1, glm::value_ptr(model.program->light_specular));
-	glUniform3fv( glGetUniformLocation(model.program->id, "light_position"), 1, glm::value_ptr(model.program->light_position));
-	glUniform3fv( glGetUniformLocation(model.program->id, "camera_position"), 1, glm::value_ptr(model.program->camera_position));
+	glUniform3fv(glGetUniformLocation(model.program->id, "light_ambient"), 1, glm::value_ptr(model.program->light_ambient)); //value_ptr zawsze podaje 1 element w przypadku tablicy
+	glUniform3fv(glGetUniformLocation(model.program->id, "light_diffuse"), 1, glm::value_ptr(model.program->light_diffuse));
+	glUniform3fv(glGetUniformLocation(model.program->id, "light_specular"), 1, glm::value_ptr(model.program->light_specular));
+	glUniform3fv(glGetUniformLocation(model.program->id, "light_position"), 1, glm::value_ptr(model.program->light_position));
+	glUniform3fv(glGetUniformLocation(model.program->id, "camera_position"), 1, glm::value_ptr(model.program->camera_position));
 
 	glDrawArrays(GL_TRIANGLES, 0, model.vertex_count);
 };

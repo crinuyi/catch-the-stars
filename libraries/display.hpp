@@ -27,7 +27,7 @@ void initialize() {
 	glEnable(GL_DEPTH_TEST);
 	frameCounter = 0;
 
-	Program* program = new Program("shaders/vertex.glsl", "shaders/fragment.glsl");
+	Program* program = new Program("shaders/phong_vertex.glsl", "shaders/phong_fragment.glsl");
 	Program* skyboxProgram = new Program("shaders/skybox_vertex.glsl", "shaders/skybox_fragment.glsl");
 	Program* confettiProgram = new Program("shaders/snowflake_vertex.glsl", "shaders/snowflake_fragment.glsl");
 
