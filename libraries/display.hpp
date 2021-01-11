@@ -11,6 +11,9 @@ void displayScene() {
 		drawText(t);
 	glEnable(GL_DEPTH_TEST);
 
+	if(countdownTimerCounter == 0)
+		confettiModel->drawConfetti();
+
 	glUseProgram( 0 );
 	glBindVertexArray( 0 );
 
@@ -24,18 +27,23 @@ void initialize() {
 
 	Program* program = new Program("shaders/vertex.glsl", "shaders/fragment.glsl");
 	Program* skyboxProgram = new Program("shaders/skybox_vertex.glsl", "shaders/skybox_fragment.glsl");
+	Program* confettiProgram = new Program("shaders/snowflake_vertex.glsl", "shaders/snowflake_fragment.glsl");
 
 	Texture* skyboxTexture = new Texture(skyboxFiles);
 	Texture* tiles = new Texture("textures/tiles.jpg");
 	Texture* tree = new Texture("textures/tree.png");
+	Texture* snowflake_tex = new Texture("textures/snowflake.png");
 
 	ground = new Ground("models/ground.obj");
 
 	Model groundModel(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, "models/ground.obj", program, tiles, false, false);
 	Model skyboxModel(0.0f, 0.0f, 5.0f, 0.0f, 0.0f, 0.0f, 50.0f, "models/cube.obj", skyboxProgram, skyboxTexture, true, false);
+	Model* oneConfettiModel = new Model(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.05f, "models/plane.obj", confettiProgram, snowflake_tex, false, false);
 
 	models.push_back(groundModel);
 	models.push_back(skyboxModel);
+
+	confettiModel = new ConfettiModel(oneConfettiModel);
 
 	for (int i=0; i<40; i++) {
 		float min = -15.0f;

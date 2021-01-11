@@ -3,6 +3,7 @@
 class Model;
 bool checkIfNoCollisions(glm::vec3 position);
 void checkForStarsToCollect(glm::vec3 position);
+class ConfettiModel;
 class Program;
 class Font;
 class Text;
@@ -10,6 +11,7 @@ class Ground;
 
 std::vector<Model> models;
 std::vector<Text> texts;
+ConfettiModel* confettiModel;
 Ground* ground;
 
 glm::mat4 matProj;

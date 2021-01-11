@@ -14,15 +14,13 @@
 #include "libraries/movement.hpp"
 #include "libraries/program.hpp"
 #include "libraries/model.hpp"
+#include "libraries/confettiModel.hpp"
 #include "libraries/font.hpp"
 #include "libraries/text.hpp"
 #include "libraries/animation.hpp"
 #include "libraries/display.hpp"
 
 // TODO -> change textures
-// TODO -> add timer
-// TODO -> add confetti at the end of the round
-// TODO -> add "Click ESC to exit" text
 
 int main(int argc, char *argv[]) {
 	glutInit(&argc, argv);
